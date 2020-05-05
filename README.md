@@ -3,9 +3,9 @@ SPPDProtocol
 
 Header Struct
 
-THeader = packed
-Header  = Byte;
-aSize   = Tid;
+THeader = packed<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Header  = Byte; <br>
+&nbsp;&nbsp;&nbsp;&nbsp; aSize   = Tid; <br>
 end;
 
 
