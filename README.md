@@ -19,6 +19,30 @@ THeader = packed<br>
 &nbsp;&nbsp;&nbsp;&nbsp; aSize   = Tid; <br>
 end;
 
+Header	FB	
+FB	FFFFFFFF	FFFF
+
++------------------+
+| 0xF3 Byte[7]     |
++------+-----------+
+| 0x00 | To Server |
++------+-----------+
+| 0x01 | To Client |
++------+-----------+
+| 0x02 | To Server |
++------+-----------+
+| 0x03 | To Client |
++------+-----------+
+| 0x04 | To Client |
++------+-----------+
+| 0x06 | To Server |
++------+-----------+
+| 0x07 | To Client |
++------+-----------+
+| 0x82 | To Server |
++------+-----------+
+| 0x83 | To Client |
++------+-----------+
 
 Send Deck Reply
 <table style="width: 534px;">
