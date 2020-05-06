@@ -2,7 +2,7 @@
 SPPDProtocol
 
 FB case<br>
-Heade:Byte;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;Length:Tid&nbsp;->&nbsp;Mode:Word;<br>
+Heade:Byte;&nbsp;->&nbsp;Length:Tid&nbsp;->&nbsp;Mode:Word;<br>
 FB&nbsp;&nbsp;&nbsp;&nbsp;FF&nbsp;FF&nbsp;FF&nbsp;FF&nbsp;&nbsp;&nbsp;&nbsp;FF&nbsp;FF
 
 
