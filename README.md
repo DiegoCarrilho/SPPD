@@ -1,12 +1,116 @@
 # SPPD
 SPPDProtocol
 
-FB case<br>
-Heade:Byte;&nbsp;->&nbsp;Length:Tid&nbsp;->&nbsp;Mode:Word;<br>
-FB&nbsp;&nbsp;&nbsp;&nbsp;FF&nbsp;FF&nbsp;FF&nbsp;FF&nbsp;&nbsp;&nbsp;&nbsp;FF&nbsp;FF
-
-
-
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-omgv">0</th>
+    <th class="tg-omgv">1</th>
+    <th class="tg-ay88">2</th>
+    <th class="tg-ay88">3</th>
+    <th class="tg-ay88">4</th>
+    <th class="tg-ay88">5</th>
+    <th class="tg-ay88">6</th>
+    <th class="tg-ay88">7</th>
+    <th class="tg-ay88">8</th>
+    <th class="tg-ay88"> </th>
+    <th class="tg-zj9c"> </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-ay88">FB</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">01</td>
+    <td class="tg-ay88">F3</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">-&gt;</td>
+    <td class="tg-zj9c">Load Balance</td>
+  </tr>
+  <tr>
+    <td class="tg-ay88">FB</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">01</td>
+    <td class="tg-ay88">F3</td>
+    <td class="tg-ay88">01</td>
+    <td class="tg-ay88">&lt;-</td>
+    <td class="tg-zj9c">Load Balance</td>
+  </tr>
+  <tr>
+    <td class="tg-ay88">FB</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">01</td>
+    <td class="tg-ay88">F3</td>
+    <td class="tg-ay88">02</td>
+    <td class="tg-ay88">-&gt;</td>
+    <td class="tg-zj9c">Battle</td>
+  </tr>
+  <tr>
+    <td class="tg-ay88">FB</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">01</td>
+    <td class="tg-ay88">F3</td>
+    <td class="tg-ay88">03</td>
+    <td class="tg-ay88">&lt;-</td>
+    <td class="tg-zj9c">Token, Match and FC&nbsp;&nbsp;&nbsp;Confirm</td>
+  </tr>
+  <tr>
+    <td class="tg-ay88">FB</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">01</td>
+    <td class="tg-ay88">F3</td>
+    <td class="tg-ay88">04</td>
+    <td class="tg-ay88">&lt;-</td>
+    <td class="tg-zj9c">Battle</td>
+  </tr>
+  <tr>
+    <td class="tg-ay88">FB</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">01</td>
+    <td class="tg-ay88">F3</td>
+    <td class="tg-ay88">06</td>
+    <td class="tg-ay88">-&gt;</td>
+    <td class="tg-zj9c">Unk 06</td>
+  </tr>
+  <tr>
+    <td class="tg-ay88">FB</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">00</td>
+    <td class="tg-ay88">01</td>
+    <td class="tg-ay88">F3</td>
+    <td class="tg-ay88">07</td>
+    <td class="tg-ay88">&lt;-</td>
+    <td class="tg-zj9c">Unk 07 </td>
+  </tr>
+</tbody>
+</table>
 
 PacketHeader Struct
 
@@ -39,10 +143,54 @@ FB	FFFFFFFF	FFFF
 +------+-----------+<br>
 | 0x07 | To Client |<br>
 +------+-----------+<br>
-| 0x82 | To Server |<br>
-+------+-----------+<br>
-| 0x83 | To Client |<br>
-+------+-----------+<br>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky" colspan="2">0xF3 Byte[7]</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-za14">0x00</td>
+    <td class="tg-za14">To Server</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">0x01</td>
+    <td class="tg-za14">To Client</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">0x02</td>
+    <td class="tg-za14">To Server</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">0x03</td>
+    <td class="tg-za14">To Client</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">0x04</td>
+    <td class="tg-za14">To Client</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">0x06</td>
+    <td class="tg-za14">To Server</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">0x07</td>
+    <td class="tg-za14">To Client</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">0x82</td>
+    <td class="tg-za14">To Server</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">0x83</td>
+    <td class="tg-za14">To Client</td>
+  </tr>
+</tbody>
+</table>
+
+
 
 Send Deck Reply
 <table style="width: 534px;">
